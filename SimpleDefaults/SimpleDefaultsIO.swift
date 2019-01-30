@@ -12,14 +12,14 @@ import Foundation
 open class SimpleDefaultsIO {
     
     /// UserDefaults instance
-    private let userDefaults = UserDefaults.standard
+    static let userDefaults = UserDefaults.standard
     
     
     /// Read recorded user default data
     ///
     /// - Parameter forKey: UserDefaults Key
     /// - Returns: UserDefaults stored data
-    public func read(forKey: String) -> Any? {
+    public static func read(forKey: String) -> Any? {
         
         let prefix = String(describing: self)
         
@@ -38,7 +38,7 @@ open class SimpleDefaultsIO {
     /// - Parameters:
     ///   - data: Store target data
     ///   - intoKey: UserDefaults stored key
-    public func record(_ data: Any?, intoKey: String) {
+    public static func record(_ data: Any?, intoKey: String) {
         
         let prefix = String(describing: self)
         
@@ -51,12 +51,7 @@ open class SimpleDefaultsIO {
     ///
     /// - Parameters:
     ///   - key: Target key name
-    public func has(key: String) -> Bool {
+    public static func has(key: String) -> Bool {
        return userDefaults.object(forKey: key) != nil
-    }
-    
-    
-    public func group(_ key: String, _: () -> Void) {
-        
     }
 }
