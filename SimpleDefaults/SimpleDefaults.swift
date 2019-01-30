@@ -9,7 +9,7 @@
 import Foundation
 
 
-open class UserDefaultStateManager {
+open class SimpleDefaults {
     
     /// UserDefaults instance
     private let userDefaults = UserDefaults.standard

@@ -1,4 +1,4 @@
-# SimpleDefault
+# SimpleDefaults
 
 SimpleDefault is UserDefault interface or manager written in Swift.
 
