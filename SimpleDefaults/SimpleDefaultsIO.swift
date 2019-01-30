@@ -1,0 +1,62 @@
+//
+//  SimpleDefaultsIO.swift
+//  SimpleDefaults
+//
+//  Created by Shota Shimazu on 2019/01/30.
+//  Copyright © 2019 Shota Shimazu. All rights reserved.
+//
+
+import Foundation
+
+
+open class SimpleDefaultsIO {
+    
+    /// UserDefaults instance
+    private let userDefaults = UserDefaults.standard
+    
+    
+    /// Read recorded user default data
+    ///
+    /// - Parameter forKey: UserDefaults Key
+    /// - Returns: UserDefaults stored data
+    public func read(forKey: String) -> Any? {
+        
+        let prefix = String(describing: self)
+        
+        let data = userDefaults.object(forKey: "\(prefix)-\(forKey)") ?? nil
+        
+        guard data != nil else {
+            return nil
+        }
+        
+        return data
+    }
+    
+    
+    /// Store data to UserDefaults with key name
+    ///
+    /// - Parameters:
+    ///   - data: Store target data
+    ///   - intoKey: UserDefaults stored key
+    public func record(_ data: Any?, intoKey: String) {
+        
+        let prefix = String(describing: self)
+        
+        userDefaults.set(data, forKey: "\(prefix)-\(intoKey)")
+        userDefaults.synchronize()
+    }
+    
+    
+    /// Check key existance
+    ///
+    /// - Parameters:
+    ///   - key: Target key name
+    public func has(key: String) -> Bool {
+       return userDefaults.object(forKey: key) != nil
+    }
+    
+    
+    public func group(_ key: String, _: () -> Void) {
+        
+    }
+}
