@@ -11,8 +11,13 @@ import Foundation
 
 open class SimpleDefaults {
     
-    private init() { }
+    private var properties: [String] {
+        return Mirror(reflecting: self).children.compactMap{ $0.label }
+    }
     
-    public static let shared = SimpleDefaults()
-
+    private func attachObserver() {
+        properties.forEach { property in
+            // TODO: Attach property observer
+        }
+    }
 }
