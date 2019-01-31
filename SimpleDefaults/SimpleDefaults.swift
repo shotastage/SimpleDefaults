@@ -10,5 +10,9 @@ import Foundation
 
 
 open class SimpleDefaults {
+    
+    private init() { }
+    
+    public static let shared = SimpleDefaults()
 
 }
