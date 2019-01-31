@@ -2,4 +2,4 @@ osx_image: xcode10
 language: objective-c
 xcode_project: SimpleDefaults.xcodeproj
 xcode_scheme: SimpleDefaults
-xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone XS
+xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone XS
