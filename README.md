@@ -1,5 +1,8 @@
 # SimpleDefaults
 
+[![Build Status](https://travis-ci.org/shotastage/SimpleDefault.svg?branch=master)](https://travis-ci.org/shotastage/SimpleDefault)
+
+
 SimpleDefault is UserDefault interface or manager written in Swift.
 
 # Features
