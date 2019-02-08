@@ -46,13 +46,11 @@ open class SimpleDefaultsIO {
         userDefaults.synchronize()
     }
     
-    public static func newRecord<T>(_ data: Any?, intoKey: String, typeName: T = "S") {
-        let prefix = String(describing: typeName)
+    public static func createAndUpdate(_ data: Any?, prefix: String) {
         
-        userDefaults.set(data, forKey: "\(prefix)-\(intoKey)")
+        userDefaults.set(data, forKey: "\(prefix)")
         userDefaults.synchronize()
     }
-    
     
     /// Check key existance
     ///
