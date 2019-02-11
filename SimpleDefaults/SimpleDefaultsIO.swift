@@ -8,12 +8,10 @@
 
 import Foundation
 
-
 open class SimpleDefaultsIO {
     
     /// UserDefaults instance
     static let userDefaults = UserDefaults.standard
-    
     
     /// Read recorded user default data
     ///
@@ -31,7 +29,6 @@ open class SimpleDefaultsIO {
         
         return data
     }
-    
     
     /// Store data to UserDefaults with key name
     ///

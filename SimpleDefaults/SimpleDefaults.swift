@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 open class SimpleDefaults: NSObject {
     
     private var properties: [String] {
