@@ -7,6 +7,9 @@ opt_in_rules:
   - empty_count
   - missing_docs
   - operator_usage_whitespace
+  - redundant_void_return
+  - leading_whitespace
+  - legacy_cggeometry_functions
 
 included:
   - SimpleDefaults

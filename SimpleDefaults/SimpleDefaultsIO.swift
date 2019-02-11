@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// SimpleDefaults Input / Output or Write / Read
 open class SimpleDefaultsIO {
     
     /// UserDefaults instance
@@ -43,6 +44,11 @@ open class SimpleDefaultsIO {
         userDefaults.synchronize()
     }
     
+    /// Store data to UserDefaults with key name prefix
+    ///
+    /// - Parameters:
+    ///   - data: Store target data
+    ///   - prefix: Key name prefix
     public static func createAndUpdate(_ data: Any?, prefix: String) {
         
         userDefaults.set(data, forKey: "\(prefix)")
