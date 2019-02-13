@@ -62,4 +62,9 @@ open class SimpleDefaultsIO {
     public static func has(key: String) -> Bool {
        return userDefaults.object(forKey: key) != nil
     }
+    
+    /// Remove objects
+    public static func remove(key: String) {
+        userDefaults.removeObject(forKey: key)
+    }
 }
