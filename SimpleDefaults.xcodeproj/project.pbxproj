@@ -11,6 +11,7 @@
 		252D654E2201D7E300FF23C0 /* SimpleDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D654D2201D7E300FF23C0 /* SimpleDefaultsTests.swift */; };
 		252D65502201D7E300FF23C0 /* SimpleDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 252D65422201D7E300FF23C0 /* SimpleDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		252D655A2201D95500FF23C0 /* SimpleDefaultsIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D65592201D95500FF23C0 /* SimpleDefaultsIO.swift */; };
+		253B9C6322141525000B8C71 /* SimpleMigrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B9C6222141525000B8C71 /* SimpleMigrate.swift */; };
 		2567050B2201E82E00D2B690 /* SimpleDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2567050A2201E82E00D2B690 /* SimpleDefaults.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		252D654D2201D7E300FF23C0 /* SimpleDefaultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDefaultsTests.swift; sourceTree = "<group>"; };
 		252D654F2201D7E300FF23C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		252D65592201D95500FF23C0 /* SimpleDefaultsIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDefaultsIO.swift; sourceTree = "<group>"; };
+		253B9C6222141525000B8C71 /* SimpleMigrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMigrate.swift; sourceTree = "<group>"; };
 		2567050A2201E82E00D2B690 /* SimpleDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				252D65432201D7E300FF23C0 /* Info.plist */,
 				252D65592201D95500FF23C0 /* SimpleDefaultsIO.swift */,
 				2567050A2201E82E00D2B690 /* SimpleDefaults.swift */,
+				253B9C6222141525000B8C71 /* SimpleMigrate.swift */,
 			);
 			path = SimpleDefaults;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253B9C6322141525000B8C71 /* SimpleMigrate.swift in Sources */,
 				252D655A2201D95500FF23C0 /* SimpleDefaultsIO.swift in Sources */,
 				2567050B2201E82E00D2B690 /* SimpleDefaults.swift in Sources */,
 			);
