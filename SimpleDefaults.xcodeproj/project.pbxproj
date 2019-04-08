@@ -13,6 +13,7 @@
 		252D655A2201D95500FF23C0 /* SimpleDefaultsIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D65592201D95500FF23C0 /* SimpleDefaultsIO.swift */; };
 		253B9C6322141525000B8C71 /* SimpleMigrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B9C6222141525000B8C71 /* SimpleMigrate.swift */; };
 		2567050B2201E82E00D2B690 /* SimpleDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2567050A2201E82E00D2B690 /* SimpleDefaults.swift */; };
+		25FD9F55225B3AAD006E441E /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD9F54225B3AAD006E441E /* IO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		252D65592201D95500FF23C0 /* SimpleDefaultsIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDefaultsIO.swift; sourceTree = "<group>"; };
 		253B9C6222141525000B8C71 /* SimpleMigrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMigrate.swift; sourceTree = "<group>"; };
 		2567050A2201E82E00D2B690 /* SimpleDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDefaults.swift; sourceTree = "<group>"; };
+		25FD9F54225B3AAD006E441E /* IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				252D65592201D95500FF23C0 /* SimpleDefaultsIO.swift */,
 				2567050A2201E82E00D2B690 /* SimpleDefaults.swift */,
 				253B9C6222141525000B8C71 /* SimpleMigrate.swift */,
+				25FD9F54225B3AAD006E441E /* IO.swift */,
 			);
 			path = SimpleDefaults;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				253B9C6322141525000B8C71 /* SimpleMigrate.swift in Sources */,
 				252D655A2201D95500FF23C0 /* SimpleDefaultsIO.swift in Sources */,
 				2567050B2201E82E00D2B690 /* SimpleDefaults.swift in Sources */,
+				25FD9F55225B3AAD006E441E /* IO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
