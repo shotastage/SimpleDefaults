@@ -12,18 +12,19 @@ open class SimpleDefaults: NSObject {
     
     override public init() {
         super.init()
+        self.registerDefaults()
         self.seedProperties()
         self.attachObserver()
-    }
-
-    deinit {
-        properties.forEach { property in
-            self.removeObserver(self, forKeyPath: property)
-        }
     }
     
     private var properties: [String] {
         return Mirror(reflecting: self).children.compactMap{ $0.label }
+    }
+    
+    deinit {
+        properties.forEach { property in
+            self.removeObserver(self, forKeyPath: property)
+        }
     }
     
     override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -43,8 +44,7 @@ extension SimpleDefaults {
     fileprivate func seedProperties() {
         properties.forEach { property in
             let key = generateKey(key: property)
-            let value = UserDefaults.standard.object(forKey: key)
-            setValue(value, forKey: property)
+            setValue(IOv2.read(forKey: key), forKey: property)
         }
     }
     
@@ -53,6 +53,15 @@ extension SimpleDefaults {
         properties.forEach { property in
             self.addObserver(self, forKeyPath: property, options: [.old, .new], context: nil)
         }
+    }
+    
+    // Register defualt value
+    fileprivate func registerDefaults() {
+        IOv2.register(properties.reduce(into: [String : Any]()) { result, property in
+            if let value = value(forKey: property) {
+                result[generateKey(key: property)] = value
+            }
+        })
     }
 }
 

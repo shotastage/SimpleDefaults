@@ -40,6 +40,10 @@ open class IOv2 {
         userDefaults.synchronize()
     }
     
+    public static func register(_ data: [String: Any]) {
+        userDefaults.register(defaults: data)
+    }
+    
     /// Check key existance
     ///
     /// - Parameters:
