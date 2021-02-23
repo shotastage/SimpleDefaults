@@ -21,7 +21,7 @@ let package = Package(
         .target(
             name: "SimpleDefaults",
             dependencies: [],
-            path: "PkgProtect"),
+            path: "SimpleDefaults"),
         .testTarget(
             name: "SimpleDefaultsTests",
             dependencies: ["SimpleDefaults"]),
