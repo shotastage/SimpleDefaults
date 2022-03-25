@@ -1,15 +1,15 @@
 //
-//  SimpleDefaultsIO.swift
+//  IO.swift
 //  SimpleDefaults
 //
-//  Created by Shota Shimazu on 2019/01/30.
+//  Created by Shota Shimazu on 2019/04/08.
 //  Copyright © 2019 Shota Shimazu. All rights reserved.
 //
 
 import Foundation
 
 /// SimpleDefaults Input / Output or Write / Read
-open class SimpleDefaultsIO {
+open class IOv2 {
     
     /// UserDefaults instance
     static let userDefaults = UserDefaults.standard
@@ -20,9 +20,7 @@ open class SimpleDefaultsIO {
     /// - Returns: UserDefaults stored data
     public static func read(forKey: String) -> Any? {
         
-        let prefix = String(describing: self)
-        
-        let data = userDefaults.object(forKey: "\(prefix)-\(forKey)") ?? nil
+        let data = userDefaults.object(forKey: "\(forKey)") ?? nil
         
         guard data != nil else {
             return nil
@@ -37,22 +35,13 @@ open class SimpleDefaultsIO {
     ///   - data: Store target data
     ///   - intoKey: UserDefaults stored key
     public static func record(_ data: Any?, intoKey: String) {
-        
-        let prefix = String(describing: self)
-        
-        userDefaults.set(data, forKey: "\(prefix)-\(intoKey)")
+
+        userDefaults.set(data, forKey: "\(intoKey)")
         userDefaults.synchronize()
     }
     
-    /// Store data to UserDefaults with key name prefix
-    ///
-    /// - Parameters:
-    ///   - data: Store target data
-    ///   - prefix: Key name prefix
-    public static func createAndUpdate(_ data: Any?, prefix: String) {
-        
-        userDefaults.set(data, forKey: "\(prefix)")
-        userDefaults.synchronize()
+    public static func register(_ data: [String: Any]) {
+        userDefaults.register(defaults: data)
     }
     
     /// Check key existance
@@ -60,7 +49,7 @@ open class SimpleDefaultsIO {
     /// - Parameters:
     ///   - key: Target key name
     public static func has(key: String) -> Bool {
-       return userDefaults.object(forKey: key) != nil
+        return userDefaults.object(forKey: key) != nil
     }
     
     /// Remove objects
