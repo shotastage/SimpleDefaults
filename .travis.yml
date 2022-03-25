@@ -1,5 +1,5 @@
-osx_image: xcode10.2
+osx_image: xcode13.3
 language: objective-c
 xcode_project: SimpleDefaults.xcodeproj
 xcode_scheme: SimpleDefaults
-xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone XS
+xcode_destination: platform=iOS Simulator,OS=15.4,name=iPhone 13
