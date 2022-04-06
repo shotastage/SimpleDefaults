@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct DefaultDefinition {
+public struct Defaultable {
     private var properties: [String] {
         return Mirror(reflecting: self).children.compactMap{ $0.label }
     }
