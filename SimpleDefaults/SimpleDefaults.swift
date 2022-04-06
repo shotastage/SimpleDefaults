@@ -33,7 +33,7 @@ open class SimpleDefaults: NSObject {
         
         let key = generateKey(key: propertyName)
         let newValue = change?[.newKey]
-        IOv2.record(newValue, intoKey: key)
+        DefaultRW.record(newValue, intoKey: key)
     }
 }
 
@@ -44,7 +44,7 @@ extension SimpleDefaults {
     fileprivate func seedProperties() {
         properties.forEach { property in
             let key = generateKey(key: property)
-            setValue(IOv2.read(forKey: key), forKey: property)
+            setValue(DefaultRW.read(forKey: key), forKey: property)
         }
     }
     
@@ -57,7 +57,7 @@ extension SimpleDefaults {
     
     // Register defualt value
     fileprivate func registerDefaults() {
-        IOv2.register(properties.reduce(into: [String : Any]()) { result, property in
+        DefaultRW.register(properties.reduce(into: [String : Any]()) { result, property in
             if let value = value(forKey: property) {
                 result[generateKey(key: property)] = value
             }

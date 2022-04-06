@@ -9,7 +9,7 @@
 import Foundation
 
 /// SimpleDefaults Input / Output or Write / Read
-open class IOv2 {
+open class DefaultRW {
     
     /// UserDefaults instance
     static let userDefaults = UserDefaults.standard
