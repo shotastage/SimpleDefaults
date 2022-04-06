@@ -10,11 +10,11 @@ import Foundation
 import SimpleDefaults
 
 class TestModelClass: SimpleDefaults {
-    
+
     var className: String {
         return String(describing: type(of: self))
     }
-    
+
     @objc dynamic var name: String = "Shota Shimazu"
     @objc dynamic var gender: Int = 0
     @objc dynamic var age: Int = 21

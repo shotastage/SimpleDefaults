@@ -10,25 +10,25 @@ import Foundation
 
 /// SimpleDefaults Input / Output or Write / Read
 open class DefaultRW {
-    
+
     /// UserDefaults instance
     static let userDefaults = UserDefaults.standard
-    
+
     /// Read recorded user default data
     ///
     /// - Parameter forKey: UserDefaults Key
     /// - Returns: UserDefaults stored data
     public static func read(forKey: String) -> Any? {
-        
+
         let data = userDefaults.object(forKey: "\(forKey)") ?? nil
-        
+
         guard data != nil else {
             return nil
         }
-        
+
         return data
     }
-    
+
     /// Store data to UserDefaults with key name
     ///
     /// - Parameters:
@@ -39,11 +39,11 @@ open class DefaultRW {
         userDefaults.set(data, forKey: "\(intoKey)")
         userDefaults.synchronize()
     }
-    
+
     public static func register(_ data: [String: Any]) {
         userDefaults.register(defaults: data)
     }
-    
+
     /// Check key existance
     ///
     /// - Parameters:
@@ -51,7 +51,7 @@ open class DefaultRW {
     public static func has(key: String) -> Bool {
         return userDefaults.object(forKey: key) != nil
     }
-    
+
     /// Remove objects
     public static func remove(key: String) {
         userDefaults.removeObject(forKey: key)
