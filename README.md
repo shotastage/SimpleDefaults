@@ -20,6 +20,9 @@ SimpleDefaults automatically attach a prefix to each keys according to Managerâ€
 
 SimpleDefaults provides only two API to `read` and `record` values with key.
 
+# TODO:
+
+- [ ] Make this type-safe.
 
 # ðŸ¥º  Author
 

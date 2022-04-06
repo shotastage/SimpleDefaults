@@ -8,13 +8,14 @@
 
 import Foundation
 
-open class SimpleDefaults: NSObject {
+public class SimpleDefaults: NSObject {
 
     override public init() {
         super.init()
-        self.registerDefaults()
-        self.seedProperties()
-        self.attachObserver()
+        setMigrationInfo()
+        registerDefaults()
+        seedProperties()
+        attachObserver()
     }
 
     private var properties: [String] {
@@ -39,6 +40,20 @@ open class SimpleDefaults: NSObject {
 
 
 extension SimpleDefaults {
+    
+    // Register migration info
+    fileprivate func setMigrationInfo() {
+        //
+    }
+    
+    // Register defualt value
+    fileprivate func registerDefaults() {
+        DefaultRW.register(properties.reduce(into: [String : Any]()) { result, property in
+            if let value = value(forKey: property) {
+                result[generateKey(key: property)] = value
+            }
+        })
+    }
 
     // Seed data to class properties when model class is initialized
     fileprivate func seedProperties() {
@@ -53,15 +68,6 @@ extension SimpleDefaults {
         properties.forEach { property in
             self.addObserver(self, forKeyPath: property, options: [.old, .new], context: nil)
         }
-    }
-
-    // Register defualt value
-    fileprivate func registerDefaults() {
-        DefaultRW.register(properties.reduce(into: [String : Any]()) { result, property in
-            if let value = value(forKey: property) {
-                result[generateKey(key: property)] = value
-            }
-        })
     }
 }
 
