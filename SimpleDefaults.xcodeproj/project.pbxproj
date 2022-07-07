@@ -10,10 +10,9 @@
 		252D65492201D7E300FF23C0 /* SimpleDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252D653F2201D7E300FF23C0 /* SimpleDefaults.framework */; };
 		252D654E2201D7E300FF23C0 /* SimpleDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D654D2201D7E300FF23C0 /* SimpleDefaultsTests.swift */; };
 		252D65502201D7E300FF23C0 /* SimpleDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 252D65422201D7E300FF23C0 /* SimpleDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		252D655A2201D95500FF23C0 /* SimpleDefaultsIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252D65592201D95500FF23C0 /* SimpleDefaultsIO.swift */; };
 		253B9C6322141525000B8C71 /* SimpleMigrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B9C6222141525000B8C71 /* SimpleMigrate.swift */; };
 		2567050B2201E82E00D2B690 /* SimpleDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2567050A2201E82E00D2B690 /* SimpleDefaults.swift */; };
-		25FD9F55225B3AAD006E441E /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD9F54225B3AAD006E441E /* IO.swift */; };
+		25FD9F55225B3AAD006E441E /* SimpleDefaultsIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD9F54225B3AAD006E441E /* SimpleDefaultsIO.swift */; };
 		25FD9F57225B4DF2006E441E /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD9F56225B4DF2006E441E /* TestModels.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,10 +33,9 @@
 		252D65482201D7E300FF23C0 /* SimpleDefaultsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleDefaultsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		252D654D2201D7E300FF23C0 /* SimpleDefaultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDefaultsTests.swift; sourceTree = "<group>"; };
 		252D654F2201D7E300FF23C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		252D65592201D95500FF23C0 /* SimpleDefaultsIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDefaultsIO.swift; sourceTree = "<group>"; };
 		253B9C6222141525000B8C71 /* SimpleMigrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMigrate.swift; sourceTree = "<group>"; };
 		2567050A2201E82E00D2B690 /* SimpleDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDefaults.swift; sourceTree = "<group>"; };
-		25FD9F54225B3AAD006E441E /* IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
+		25FD9F54225B3AAD006E441E /* SimpleDefaultsIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDefaultsIO.swift; sourceTree = "<group>"; };
 		25FD9F56225B4DF2006E441E /* TestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,10 +81,9 @@
 			children = (
 				252D65422201D7E300FF23C0 /* SimpleDefaults.h */,
 				252D65432201D7E300FF23C0 /* Info.plist */,
-				252D65592201D95500FF23C0 /* SimpleDefaultsIO.swift */,
 				2567050A2201E82E00D2B690 /* SimpleDefaults.swift */,
 				253B9C6222141525000B8C71 /* SimpleMigrate.swift */,
-				25FD9F54225B3AAD006E441E /* IO.swift */,
+				25FD9F54225B3AAD006E441E /* SimpleDefaultsIO.swift */,
 			);
 			path = SimpleDefaults;
 			sourceTree = "<group>";
@@ -212,9 +209,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				253B9C6322141525000B8C71 /* SimpleMigrate.swift in Sources */,
-				252D655A2201D95500FF23C0 /* SimpleDefaultsIO.swift in Sources */,
 				2567050B2201E82E00D2B690 /* SimpleDefaults.swift in Sources */,
-				25FD9F55225B3AAD006E441E /* IO.swift in Sources */,
+				25FD9F55225B3AAD006E441E /* SimpleDefaultsIO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -373,18 +369,20 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SimpleDefaults/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shotastage.SimpleDefaults;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -401,17 +399,19 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SimpleDefaults/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shotastage.SimpleDefaults;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
