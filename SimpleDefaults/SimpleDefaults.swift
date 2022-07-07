@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SimpleDefaults: NSObject {
+open class SimpleDefaults: NSObject {
 
     override public init() {
         super.init()
